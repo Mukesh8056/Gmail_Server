@@ -9,7 +9,7 @@ require('dotenv').config()
 const cons = require('cors');
 
 const corsOption ={
-    original:"*"
+    origin:"*"
 };
 
 app.use(cons(corsOption))
