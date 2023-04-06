@@ -9,7 +9,7 @@ require('dotenv').config()
 const cons = require('cors');
 
 const corsOption ={
-    original:"http://localhost:3000/"
+    original:"*"
 };
 
 app.use(cons(corsOption))
@@ -18,9 +18,9 @@ app.use (express.json())
 
 app.use(express.urlencoded({extended:false}));
 
-const users = require("../server/src/router/users")
-const auth = require("../server/src/router/auth")
-const mail = require("../server/src/router/mail")
+const users = require("/src/router/users")
+const auth = require("/src/router/auth")
+const mail = require("/src/router/mail")
 
 app.use("/users", users)
 app.use("/auth", auth)
