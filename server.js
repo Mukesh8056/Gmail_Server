@@ -6,13 +6,13 @@ const mongoose = require('mongoose')
 
 require('dotenv').config()
 
-const cons = require('cors');
+const cors = require('cors');
 
 const corsOption ={
-    origin:"http://localhost:3000/"
+    original:"http://localhost:3000/"
 };
 
-app.use(cons(corsOption))
+app.use(cors(corsOption))
 
 app.use (express.json())
 
